@@ -61,6 +61,9 @@ function App() {
           )}
         </VStack>
       </Box>
+      <Box as="footer" textAlign="center" mt={8} mb={4} color="gray.500" fontSize="sm">
+        © {new Date().getFullYear()} Vaidik Trivedi. All rights reserved.
+      </Box>
     </ChakraProvider>
   );
 }
