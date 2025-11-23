@@ -1,0 +1,9 @@
+# Backend requirements
+fastapi
+uvicorn
+pandas
+yfinance
+prophet
+matplotlib
+pandas_ta
+python-multipart
