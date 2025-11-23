@@ -134,11 +134,6 @@ The app will be available at [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## License
-MIT (or your preferred license)
-
----
-
 ## Credits
 - [yfinance](https://github.com/ranaroussi/yfinance)
 - [pandas_ta](https://github.com/twopirllc/pandas-ta)
