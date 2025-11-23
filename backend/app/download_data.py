@@ -49,22 +49,22 @@ def fetch_and_store_data(conn, tickers):
             # 'period="max"' gets all available data
             stock_data = yf.download(ticker, period="max")
             
-            if stock_data.empty:
+            if stock_data.empty: # type: ignore
                 print(f"Could not find data for {ticker}. Skipping.")
                 continue
                 
             # Add the ticker symbol as a column for storage
-            stock_data['Ticker'] = ticker
+            stock_data['Ticker'] = ticker # type: ignore
             
             # Reset the index to turn the 'Date' (which is the index) into a column
-            stock_data.reset_index(inplace=True)
+            stock_data.reset_index(inplace=True) # type: ignore
             
             # Convert Date to string format for SQLite compatibility
-            stock_data['Date'] = stock_data['Date'].dt.strftime('%Y-%m-%d')
+            stock_data['Date'] = stock_data['Date'].dt.strftime('%Y-%m-%d') # type: ignore
             
             # Ensure columns are in the correct order and all present
             columns_needed = ['Date', 'Open', 'High', 'Low', 'Close', 'Volume', 'Ticker']
-            stock_data = stock_data[columns_needed]
+            stock_data = stock_data[columns_needed] # type: ignore
             
             # Use 'executemany' for efficient batch insertion
             # 'OR IGNORE' skips duplicate entries (based on the PRIMARY KEY)
