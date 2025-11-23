@@ -213,3 +213,4 @@ GithubPublicKey.pub
 
 frontend/node_modules
 package-lock.json
+backend/app/stocks.db

@@ -53,6 +53,7 @@ cd Stock-Tracker
 
 #### a. Create a Python virtual environment (recommended)
 ```sh
+cd backend
 python3 -m venv .venv
 source .venv/bin/activate
 ```
@@ -65,12 +66,14 @@ pip install -r backend/requirements.txt
 #### c. Download stock data
 Edit `backend/app/config.json` to add your tickers, then run:
 ```sh
-python backend/app/download_data.py
+cd backend/app
+python download_data.py
 ```
 
 #### d. Start the backend server
 ```sh
-uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000
+cd backend/app
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ### 3. Frontend Setup (React + Chakra UI)
