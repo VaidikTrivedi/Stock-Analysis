@@ -1,0 +1,12 @@
+{
+  "purchased_stocks": [
+    "AAPL",
+    "MSFT",
+    "GOOGL"
+  ],
+  "watchlist": [
+    "NVDA",
+    "TSLA",
+    "AMD"
+  ]
+}
