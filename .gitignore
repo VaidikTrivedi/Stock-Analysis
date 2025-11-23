@@ -208,3 +208,8 @@ __marimo__/
 
 .vscode
 .venv
+GithubPublicKey
+GithubPublicKey.pub
+
+frontend/node_modules
+package-lock.json
